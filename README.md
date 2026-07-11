@@ -2,6 +2,7 @@
 
 Проект содержит реализацию архитектуры Transformer на PyTorch. Модель обучена на датасете OPUS-100 для перевода с русского языка на английский.
 
+Веса модели: https://drive.google.com/drive/folders/1myrFmVeuuM07lNLOnLUPWoY--3BmXane?usp=sharing
 ---
 
 ## Реализованные компоненты
