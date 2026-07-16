@@ -1,6 +1,6 @@
 # Архитектура Transformer для русско-английского машинного перевода
 
-Проект содержит реализацию архитектуры Transformer на PyTorch. Модель обучена на датасете OPUS-100 для перевода с русского языка на английский.
+Модель обучена на датасете OPUS-100, на ru-en паре.
 
 Веса модели: https://drive.google.com/drive/folders/1myrFmVeuuM07lNLOnLUPWoY--3BmXane?usp=sharing
 ---
