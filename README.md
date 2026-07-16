@@ -6,7 +6,9 @@
 
 Веса модели: https://drive.google.com/drive/folders/1myrFmVeuuM07lNLOnLUPWoY--3BmXane?usp=sharing
 
-## Полученные метрики
+<p align="center">
+  <img src="https://img.shields.io/badge/Полученные_метрики-3498db?style=for-the-badge" alt="Полученные метрики" width="500">
+</p>
 
 Для оценки качества перевода обученной модели были использованы три стандартные метрики: BLEU (Bilingual Evaluation Understudy), METEOR (Metric for Evaluation of Translation with Explicit Ordering) и TER (Translation Edit Rate). Оценка проводилась на тестовой выборке из 2000 предложений. Результаты представлены в таблице ниже.
 
@@ -32,7 +34,9 @@
 У BLEU диапазон от 0 до 100, выше 20 минимально достаточно для сохранения общего смысла. 
 METEOR от 0 до 1, где 0.3–0.5 среднее качество перевода с передачей ключевой семантики. У TER в идеале стремится к 0, а норма --- 0.4–0.6. Превышение из-за избыточного циклического повтора токенов.
 
-## Инференс
+<p align="center">
+  <img src="https://img.shields.io/badge/Инференс-f39c12?style=for-the-badge" alt="Инференс" width="500">
+</p>
 
 Здесь есть пробелы, потому что нужно обучить обратный токенизатор-склеиватель, чтобы от них избавиться, но в моей реализации его нет(
 
