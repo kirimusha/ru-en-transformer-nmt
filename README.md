@@ -8,11 +8,28 @@
 
 Для оценки качества перевода обученной модели были использованы три стандартные метрики: BLEU (Bilingual Evaluation Understudy), METEOR (Metric for Evaluation of Translation with Explicit Ordering) и TER (Translation Edit Rate). Оценка проводилась на тестовой выборке из 2000 предложений. Результаты представлены в таблице ниже.
 
-| Метрика | Значение |
-| :--- | :--- |
-| BLEU | 20.01 |
-| METEOR | 0.3927 |
-| TER | 1.0747 |
+<table>
+  <thead>
+    <tr style="background-color: #2c3e50; color: white;">
+      <th style="padding: 10px; text-align: center;">Метрика</th>
+      <th style="padding: 10px; text-align: center;">Значение</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: #d5e8d0;">
+      <td style="padding: 8px; text-align: center; font-weight: bold;">BLEU</td>
+      <td style="padding: 8px; text-align: center; color: #27ae60; font-weight: bold;">20.01</td>
+    </tr>
+    <tr style="background-color: #fdebd0;">
+      <td style="padding: 8px; text-align: center; font-weight: bold;">METEOR</td>
+      <td style="padding: 8px; text-align: center; color: #e67e22; font-weight: bold;">0.3927</td>
+    </tr>
+    <tr style="background-color: #fadbd8;">
+      <td style="padding: 8px; text-align: center; font-weight: bold;">TER</td>
+      <td style="padding: 8px; text-align: center; color: #c0392b; font-weight: bold;">1.0747</td>
+    </tr>
+  </tbody>
+</table>
 
 У BLEU диапазон от 0 до 100, выше 20 минимально достаточно для сохранения общего смысла. 
 METEOR от 0 до 1, где 0.3–0.5 среднее качество перевода с передачей ключевой семантики. У TER в идеале стремится к 0, а норма --- 0.4–0.6. Превышение из-за избыточного циклического повтора токенов.
@@ -21,81 +38,190 @@ METEOR от 0 до 1, где 0.3–0.5 среднее качество пере�
 
 Здесь есть пробелы, потому что нужно обучить обратный токенизатор-склеиватель, чтобы от них избавиться, но в моей реализации его нет(
 
-**Пример 1**
+<h3 style="color: #2980b9;">Пример 1</h3>
 
-| | |
-| Исходник | Было так холодно на улице , вы просто не представля ете . |
-| Референс | It ' s so cold out there , you ' ve no idea . |
-| Перевод | It was so cold , you just don ' t have to do it . |
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td style="background-color: #3498db; color: white; padding: 8px; font-weight: bold; width: 15%;">Исходник</td>
+    <td style="background-color: #ecf0f1; padding: 8px;">Было так холодно на улице , вы просто не представля ете .</td>
+  </tr>
+  <tr>
+    <td style="background-color: #2ecc71; color: white; padding: 8px; font-weight: bold;">Референс</td>
+    <td style="background-color: #eafaf1; padding: 8px;">It ' s so cold out there , you ' ve no idea .</td>
+  </tr>
+  <tr>
+    <td style="background-color: #e67e22; color: white; padding: 8px; font-weight: bold;">Перевод</td>
+    <td style="background-color: #fef9e7; padding: 8px;">It was so cold , you just don ' t have to do it .</td>
+  </tr>
+</table>
 
-**Пример 2**
+<br>
 
-| | |
-| :--- | :--- |
-| Исходник | Я всё знаю , мистер Уол кер . |
-| Референс | Nothing gets by me , Mr . Wal ker . |
-| Перевод | I know everything , Mr . Wal ker . |
+<h3 style="color: #2980b9;">Пример 2</h3>
 
-**Пример 3**
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td style="background-color: #3498db; color: white; padding: 8px; font-weight: bold; width: 15%;">Исходник</td>
+    <td style="background-color: #ecf0f1; padding: 8px;">Я всё знаю , мистер Уол кер .</td>
+  </tr>
+  <tr>
+    <td style="background-color: #2ecc71; color: white; padding: 8px; font-weight: bold;">Референс</td>
+    <td style="background-color: #eafaf1; padding: 8px;">Nothing gets by me , Mr . Wal ker .</td>
+  </tr>
+  <tr>
+    <td style="background-color: #e67e22; color: white; padding: 8px; font-weight: bold;">Перевод</td>
+    <td style="background-color: #fef9e7; padding: 8px;">I know everything , Mr . Wal ker .</td>
+  </tr>
+</table>
 
-| | |
-| :--- | :--- |
-| Исходник | Есть ли шанс , что все это просто обру шится ? |
-| Референс | Isn ' t there a chance this lot ' s just gonna collapse ? |
-| Перевод | Is there anything that ' s just a joke ? |
+<br>
 
-**Пример 4**
+<h3 style="color: #2980b9;">Пример 3</h3>
 
-| | |
-| :--- | :--- |
-| Исходник | 34 И зна чали й 25 гер . ( 00 : 06 : 31 ) |
-| Референс | 3 Im mer se us 10 ( 00 : 06 : 32 ) |
-| Перевод | 34 25 H ( 00 : 06 : 31 ) |
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td style="background-color: #3498db; color: white; padding: 8px; font-weight: bold; width: 15%;">Исходник</td>
+    <td style="background-color: #ecf0f1; padding: 8px;">Есть ли шанс , что все это просто обру шится ?</td>
+  </tr>
+  <tr>
+    <td style="background-color: #2ecc71; color: white; padding: 8px; font-weight: bold;">Референс</td>
+    <td style="background-color: #eafaf1; padding: 8px;">Isn ' t there a chance this lot ' s just gonna collapse ?</td>
+  </tr>
+  <tr>
+    <td style="background-color: #e67e22; color: white; padding: 8px; font-weight: bold;">Перевод</td>
+    <td style="background-color: #fef9e7; padding: 8px;">Is there anything that ' s just a joke ?</td>
+  </tr>
+</table>
 
-**Пример 5**
+<br>
 
-| | |
-| :--- | :--- |
-| Исходник | Но два учени ка - это не достаточно , чтобы держать открытой школу . |
-| Референс | Two students are not enough to sustain a school . |
-| Перевод | But two - is not enough enough to keep the school school . |
+<h3 style="color: #2980b9;">Пример 4</h3>
 
-**Пример 6**
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td style="background-color: #3498db; color: white; padding: 8px; font-weight: bold; width: 15%;">Исходник</td>
+    <td style="background-color: #ecf0f1; padding: 8px;">34 И зна чали й 25 гер . ( 00 : 06 : 31 )</td>
+  </tr>
+  <tr>
+    <td style="background-color: #2ecc71; color: white; padding: 8px; font-weight: bold;">Референс</td>
+    <td style="background-color: #eafaf1; padding: 8px;">3 Im mer se us 10 ( 00 : 06 : 32 )</td>
+  </tr>
+  <tr>
+    <td style="background-color: #e67e22; color: white; padding: 8px; font-weight: bold;">Перевод</td>
+    <td style="background-color: #fef9e7; padding: 8px;">34 25 H ( 00 : 06 : 31 )</td>
+  </tr>
+</table>
 
-| | |
-| :--- | :--- |
-| Исходник | Они знали , о деньгах , и они знали точную сумму . |
-| Референс | They knew about the money and they knew the exact amount . |
-| Перевод | They knew about money , and they knew the amount of the amount . |
+<br>
 
-**Пример 7**
+<h3 style="color: #2980b9;">Пример 5</h3>
 
-| | |
-| :--- | :--- |
-| Исходник | 14 15 |
-| Референс | 84 15 |
-| Перевод | 14 15 |
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td style="background-color: #3498db; color: white; padding: 8px; font-weight: bold; width: 15%;">Исходник</td>
+    <td style="background-color: #ecf0f1; padding: 8px;">Но два учени ка - это не достаточно , чтобы держать открытой школу .</td>
+  </tr>
+  <tr>
+    <td style="background-color: #2ecc71; color: white; padding: 8px; font-weight: bold;">Референс</td>
+    <td style="background-color: #eafaf1; padding: 8px;">Two students are not enough to sustain a school .</td>
+  </tr>
+  <tr>
+    <td style="background-color: #e67e22; color: white; padding: 8px; font-weight: bold;">Перевод</td>
+    <td style="background-color: #fef9e7; padding: 8px;">But two - is not enough enough to keep the school school .</td>
+  </tr>
+</table>
 
-**Пример 8**
+<br>
 
-| | |
-| :--- | :--- |
-| Исходник | It is currently Fri May 20 , 2016 12 : 29 am |
-| Референс | It is currently Tue May 17 , 2016 12 : 07 am |
-| Перевод | It is currently Fri May 27 , 2016 1 : 16 am |
+<h3 style="color: #2980b9;">Пример 6</h3>
 
-**Пример 9**
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td style="background-color: #3498db; color: white; padding: 8px; font-weight: bold; width: 15%;">Исходник</td>
+    <td style="background-color: #ecf0f1; padding: 8px;">Они знали , о деньгах , и они знали точную сумму .</td>
+  </tr>
+  <tr>
+    <td style="background-color: #2ecc71; color: white; padding: 8px; font-weight: bold;">Референс</td>
+    <td style="background-color: #eafaf1; padding: 8px;">They knew about the money and they knew the exact amount .</td>
+  </tr>
+  <tr>
+    <td style="background-color: #e67e22; color: white; padding: 8px; font-weight: bold;">Перевод</td>
+    <td style="background-color: #fef9e7; padding: 8px;">They knew about money , and they knew the amount of the amount .</td>
+  </tr>
+</table>
 
-| | |
-| :--- | :--- |
-| Исходник | Каза лось , будто с ними легче разговаривать , чем с местными жи телями , американ цами , которые обслужи вали нас и пода вали нам еду . |
-| Референс | It seemed they were probably easier to talk to than the local Americans who were waiting on us as and serving food . |
-| Перевод | It was like it was easier to talk to them than the Americans that had the Americans that had taken us and had brought us . |
+<br>
 
-**Пример 10**
+<h3 style="color: #2980b9;">Пример 7</h3>
 
-| | |
-| :--- | :--- |
-| Исходник | - Мы будем делать домаш ние зада ния . |
-| Референс | - We ' ll do home work . |
-| Перевод | - We ' re gonna do the home of the home . |
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td style="background-color: #3498db; color: white; padding: 8px; font-weight: bold; width: 15%;">Исходник</td>
+    <td style="background-color: #ecf0f1; padding: 8px;">14 15</td>
+  </tr>
+  <tr>
+    <td style="background-color: #2ecc71; color: white; padding: 8px; font-weight: bold;">Референс</td>
+    <td style="background-color: #eafaf1; padding: 8px;">84 15</td>
+  </tr>
+  <tr>
+    <td style="background-color: #e67e22; color: white; padding: 8px; font-weight: bold;">Перевод</td>
+    <td style="background-color: #fef9e7; padding: 8px;">14 15</td>
+  </tr>
+</table>
+
+<br>
+
+<h3 style="color: #2980b9;">Пример 8</h3>
+
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td style="background-color: #3498db; color: white; padding: 8px; font-weight: bold; width: 15%;">Исходник</td>
+    <td style="background-color: #ecf0f1; padding: 8px;">It is currently Fri May 20 , 2016 12 : 29 am</td>
+  </tr>
+  <tr>
+    <td style="background-color: #2ecc71; color: white; padding: 8px; font-weight: bold;">Референс</td>
+    <td style="background-color: #eafaf1; padding: 8px;">It is currently Tue May 17 , 2016 12 : 07 am</td>
+  </tr>
+  <tr>
+    <td style="background-color: #e67e22; color: white; padding: 8px; font-weight: bold;">Перевод</td>
+    <td style="background-color: #fef9e7; padding: 8px;">It is currently Fri May 27 , 2016 1 : 16 am</td>
+  </tr>
+</table>
+
+<br>
+
+<h3 style="color: #2980b9;">Пример 9</h3>
+
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td style="background-color: #3498db; color: white; padding: 8px; font-weight: bold; width: 15%;">Исходник</td>
+    <td style="background-color: #ecf0f1; padding: 8px;">Каза лось , будто с ними легче разговаривать , чем с местными жи телями , американ цами , которые обслужи вали нас и пода вали нам еду .</td>
+  </tr>
+  <tr>
+    <td style="background-color: #2ecc71; color: white; padding: 8px; font-weight: bold;">Референс</td>
+    <td style="background-color: #eafaf1; padding: 8px;">It seemed they were probably easier to talk to than the local Americans who were waiting on us as and serving food .</td>
+  </tr>
+  <tr>
+    <td style="background-color: #e67e22; color: white; padding: 8px; font-weight: bold;">Перевод</td>
+    <td style="background-color: #fef9e7; padding: 8px;">It was like it was easier to talk to them than the Americans that had the Americans that had taken us and had brought us .</td>
+  </tr>
+</table>
+
+<br>
+
+<h3 style="color: #2980b9;">Пример 10</h3>
+
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td style="background-color: #3498db; color: white; padding: 8px; font-weight: bold; width: 15%;">Исходник</td>
+    <td style="background-color: #ecf0f1; padding: 8px;">- Мы будем делать домаш ние зада ния .</td>
+  </tr>
+  <tr>
+    <td style="background-color: #2ecc71; color: white; padding: 8px; font-weight: bold;">Референс</td>
+    <td style="background-color: #eafaf1; padding: 8px;">- We ' ll do home work .</td>
+  </tr>
+  <tr>
+    <td style="background-color: #e67e22; color: white; padding: 8px; font-weight: bold;">Перевод</td>
+    <td style="background-color: #fef9e7; padding: 8px;">- We ' re gonna do the home of the home .</td>
+  </tr>
+</table>
