@@ -102,27 +102,7 @@ METEOR от 0 до 1, где 0.3–0.5 среднее качество пере�
 
 <table>
   <p align="left">
-  <img src="https://img.shields.io/badge/Пример_4-c0392b?style=for-the-badge" alt="Пример 4">
-  </p>
-  <tr>
-    <td style="background-color: #c0392b; color: white; padding: 6px; width: 15%;"><b>Исходник</b></td>
-    <td style="background-color: #fadbd8; padding: 6px;">34 И зна чали й 25 гер . ( 00 : 06 : 31 )</td>
-  </tr>
-  <tr>
-    <td style="background-color: #c0392b; color: white; padding: 6px;"><b>Референс</b></td>
-    <td style="background-color: #fadbd8; padding: 6px;">3 Im mer se us 10 ( 00 : 06 : 32 )</td>
-  </tr>
-  <tr>
-    <td style="background-color: #c0392b; color: white; padding: 6px;"><b>Перевод</b></td>
-    <td style="background-color: #fadbd8; padding: 6px;">34 25 H ( 00 : 06 : 31 )</td>
-  </tr>
-</table>
-
-<br>
-
-<table>
-  <p align="left">
-  <img src="https://img.shields.io/badge/Пример_5-c0392b?style=for-the-badge" alt="Пример 5">
+  <img src="https://img.shields.io/badge/Пример_5-c0392b?style=for-the-badge" alt="Пример 4">
   </p>
   <tr>
     <td style="background-color: #c0392b; color: white; padding: 6px; width: 15%;"><b>Исходник</b></td>
@@ -142,7 +122,7 @@ METEOR от 0 до 1, где 0.3–0.5 среднее качество пере�
 
 <table>
   <p align="left">
-  <img src="https://img.shields.io/badge/Пример_6-c0392b?style=for-the-badge" alt="Пример 6">
+  <img src="https://img.shields.io/badge/Пример_6-c0392b?style=for-the-badge" alt="Пример 5">
   </p>
   <tr>
     <td style="background-color: #c0392b; color: white; padding: 6px; width: 15%;"><b>Исходник</b></td>
@@ -162,7 +142,7 @@ METEOR от 0 до 1, где 0.3–0.5 среднее качество пере�
 
 <table>
   <p align="left">
-  <img src="https://img.shields.io/badge/Пример_9-c0392b?style=for-the-badge" alt="Пример 7">
+  <img src="https://img.shields.io/badge/Пример_9-c0392b?style=for-the-badge" alt="Пример 6">
   </p>
   <tr>
     <td style="background-color: #c0392b; color: white; padding: 6px; width: 15%;"><b>Исходник</b></td>
@@ -182,7 +162,7 @@ METEOR от 0 до 1, где 0.3–0.5 среднее качество пере�
 
 <table>
   <p align="left">
-  <img src="https://img.shields.io/badge/Пример_10-c0392b?style=for-the-badge" alt="Пример 8">
+  <img src="https://img.shields.io/badge/Пример_10-c0392b?style=for-the-badge" alt="Пример 7">
   </p>
   <tr>
     <td style="background-color: #c0392b; color: white; padding: 6px; width: 15%;"><b>Исходник</b></td>
