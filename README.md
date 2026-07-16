@@ -8,9 +8,24 @@
 
 Для оценки качества перевода обученной модели были использованы три стандартные метрики: BLEU (Bilingual Evaluation Understudy), METEOR (Metric for Evaluation of Translation with Explicit Ordering) и TER (Translation Edit Rate). Оценка проводилась на тестовой выборке из 2000 предложений. Результаты представлены в таблице ниже.
 
-<table> <tr> <th style="background-color: #2c3e50; color: white; padding: 8px;">Метрика</th> <th style="background-color: #2c3e50; color: white; padding: 8px;">Значение</th> </tr> <tr> <td style="background-color: #2874a6; color: white; padding: 8px;"><b>BLEU</b></td> <td style="background-color: #d4e6f1; padding: 8px;"><b>20.01</b></td> </tr> <tr> <td style="background-color: #1e8449; color: white; padding: 8px;"><b>METEOR</b></td> <td style="background-color: #d5f5e3; padding: 8px;"><b>0.3927</b></td> </tr> <tr> <td style="background-color: #b9770e; color: white; padding: 8px;"><b>TER</b></td> <td style="background-color: #fdebd0; padding: 8px;"><b>1.0747</b></td> </tr> </table>
-
-
+<table>
+  <tr>
+    <th style="background-color: #2c3e50; color: white; padding: 8px;">Метрика</th>
+    <th style="background-color: #2c3e50; color: white; padding: 8px;">Значение</th>
+  </tr>
+  <tr>
+    <td style="background-color: #2874a6; color: white; padding: 8px;"><b>BLEU</b></td>
+    <td style="background-color: #d4e6f1; padding: 8px;"><b>20.01</b></td>
+  </tr>
+  <tr>
+    <td style="background-color: #1e8449; color: white; padding: 8px;"><b>METEOR</b></td>
+    <td style="background-color: #d5f5e3; padding: 8px;"><b>0.3927</b></td>
+  </tr>
+  <tr>
+    <td style="background-color: #b9770e; color: white; padding: 8px;"><b>TER</b></td>
+    <td style="background-color: #fdebd0; padding: 8px;"><b>1.0747</b></td>
+  </tr>
+</table>
 У BLEU диапазон от 0 до 100, выше 20 минимально достаточно для сохранения общего смысла. 
 METEOR от 0 до 1, где 0.3–0.5 среднее качество перевода с передачей ключевой семантики. У TER в идеале стремится к 0, а норма --- 0.4–0.6. Превышение из-за избыточного циклического повтора токенов.
 
