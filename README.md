@@ -7,6 +7,10 @@
 
 ## Полученные метрики
 
+Для оценки качества перевода обученной модели были использованы три
+стандартные метрики: BLEU (Bilingual Evaluation Understudy), METEOR (Metric
+for Evaluation of Translation with Explicit Ordering) и TER (Translation Edit Rate). Оценка проводилась на тестовой выборке из 2000 предложений. Результаты представлены в таблице ниже.
+
 | Метрика | Значение |
 | :--- | :--- |
 | BLEU | 20.01 |
